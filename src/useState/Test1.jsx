@@ -1,4 +1,6 @@
 import { Link } from "react-router-dom";
+import { Header } from "../Header";
+import { pathNames } from "../main";
 
 export const Test1 = () => {
 	let value = "old value";
@@ -8,9 +10,7 @@ export const Test1 = () => {
 	};
 	return (
 		<div>
-			<h2>Базовая теория useState</h2>
-			<p>Код этого файла можно найти в файле:</p>
-			<code>src/useState/Test1.jsx</code>
+			<Header title="Базовая теория useState" src="src/useState/Test1.jsx" />
 
 			<div className="code_wrapper">
 				<p>Вот так в ванильном JS мы изменяли значение переменной:</p>
@@ -33,7 +33,7 @@ export const Test1 = () => {
 
 			<p>В следующих уроках вы узнаете как это исправить</p>
 
-			<Link>Следующее задание</Link>
+			<Link to={pathNames.useState.test2}>Следующее задание</Link>
 		</div>
 	);
 };
