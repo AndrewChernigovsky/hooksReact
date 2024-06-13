@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { Header } from "../../Header.jsx";
 import { pathNames } from "../../assets/routes/useState.jsx";
+import { useStateTopicsInfo } from "../TopicsList.jsx";
 
 export const Example3 = () => {
 	const languageInfo = { languageName: "javaScript", createdAt: "8 июля 1996" };
@@ -11,7 +12,10 @@ export const Example3 = () => {
 
 	return (
 		<div>
-			<Header title="Базовая теория useState" src="src/useState/Example3.jsx" />
+			<Header
+				title={useStateTopicsInfo.example.example3.name}
+				src={useStateTopicsInfo.example.example3.src}
+			/>
 
 			<p>Работа с примитивами это - примитивно</p>
 			<p>

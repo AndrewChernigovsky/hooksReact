@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import { Header } from "../../Header.jsx";
 import { pathNames } from "../../assets/routes/useState.jsx";
+import { useStateTopicsInfo } from "../TopicsList.jsx";
 
 export const Example6 = () => {
 	const [languages, setLanguages] = useState(["HTML", "CSS"]);
@@ -12,7 +13,10 @@ export const Example6 = () => {
 
 	return (
 		<div>
-			<Header title="Базовая теория useState" src="src/useState/Example6.jsx" />
+			<Header
+				title={useStateTopicsInfo.example.example6.name}
+				src={useStateTopicsInfo.example.example6.src}
+			/>
 			<p>
 				Правильным же решением будет использовать useState для обновления
 				состояния в React

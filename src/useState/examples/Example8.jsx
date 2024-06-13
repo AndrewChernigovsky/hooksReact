@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import { Header } from "../../Header.jsx";
 import { pathNames } from "../../assets/routes/useState.jsx";
+import { useStateTopicsInfo } from "../TopicsList.jsx";
 
 export const Example8 = () => {
 	const [languagesInfo, setLanguagesInfo] = useState([
@@ -28,7 +29,10 @@ export const Example8 = () => {
 
 	return (
 		<div>
-			<Header title="Базовая теория useState" src="src/useState/Example8.jsx" />
+			<Header
+				title={useStateTopicsInfo.example.example8.name}
+				src={useStateTopicsInfo.example.example8.src}
+			/>
 			<p>
 				У нас есть начальное состояние: это массив объектов с информацией о
 				языках программирования

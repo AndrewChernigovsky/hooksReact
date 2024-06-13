@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { Header } from "../../Header.jsx";
 import { pathNames } from "../../assets/routes/useState.jsx";
+import { useStateTopicsInfo } from "../TopicsList.jsx";
 
 export const Example5 = () => {
 	const languages = ["HTML", "CSS"];
@@ -11,7 +12,10 @@ export const Example5 = () => {
 
 	return (
 		<div>
-			<Header title="Базовая теория useState" src="src/useState/Example5.jsx" />
+			<Header
+				title={useStateTopicsInfo.example.example5.name}
+				src={useStateTopicsInfo.example.example5.src}
+			/>
 			<p>
 				Как не трудно догадатся с массивами тоже не все так просто, просой push
 				не работает

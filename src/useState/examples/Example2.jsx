@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import { Header } from "../../Header.jsx";
 import { pathNames } from "../../assets/routes/useState.jsx";
+import { useStateTopicsInfo } from "../TopicsList.jsx";
 
 export const Example2 = () => {
 	const [value, setValue] = useState("old value");
@@ -12,7 +13,10 @@ export const Example2 = () => {
 
 	return (
 		<div>
-			<Header title="Базовая теория useState" src="src/useState/Example2.jsx" />
+			<Header
+				title={useStateTopicsInfo.example.example2.name}
+				src={useStateTopicsInfo.example.example2.src}
+			/>
 
 			<p>
 				Теперь давайте обновлять значение правильно, для этого на понадобится

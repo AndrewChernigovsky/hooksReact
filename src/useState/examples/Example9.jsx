@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import { Header } from "../../Header.jsx";
 import { pathNames } from "../../assets/routes/useState.jsx";
+import { useStateTopicsInfo } from "../TopicsList.jsx";
 
 export const Example9 = () => {
 	const [languagesInfo, setLanguagesInfo] = useState([
@@ -30,7 +31,10 @@ export const Example9 = () => {
 
 	return (
 		<div>
-			<Header title="Базовая теория useState" src="src/useState/Example9.jsx" />
+			<Header
+				title={useStateTopicsInfo.example.example9.name}
+				src={useStateTopicsInfo.example.example9.src}
+			/>
 			<p>
 				Давай снова отредактируем наш немного не правильный массив объектов с
 				языками

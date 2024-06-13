@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { Header } from "../../Header.jsx";
 import { pathNames } from "../../assets/routes/useState.jsx";
+import { useStateTopicsInfo } from "../TopicsList.jsx";
 
 export const Example1 = () => {
 	let value = "old value";
@@ -10,7 +11,10 @@ export const Example1 = () => {
 	};
 	return (
 		<div>
-			<Header title="Базовая теория useState" src="src/useState/Example1.jsx" />
+			<Header
+				title={useStateTopicsInfo.example.example1.name}
+				src={useStateTopicsInfo.example.example1.src}
+			/>
 
 			<p>Вот так в ванильном JS мы изменяли значение переменной:</p>
 
