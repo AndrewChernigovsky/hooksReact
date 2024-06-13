@@ -10,6 +10,7 @@ import { Test4 } from "./useState/Test4.jsx";
 import { Test5 } from "./useState/Test5.jsx";
 import { Test6 } from "./useState/Test6.jsx";
 import { Test7 } from "./useState/Test7.jsx";
+import { Test8 } from "./useState/Test8.jsx";
 
 export const pathNames = {
 	useState: {
@@ -20,6 +21,7 @@ export const pathNames = {
 		test5: "/useState-test-5",
 		test6: "/useState-test-6",
 		test7: "/useState-test-7",
+		test8: "/useState-test-8",
 	},
 };
 const router = createBrowserRouter([
@@ -54,6 +56,10 @@ const router = createBrowserRouter([
 	{
 		path: pathNames.useState.test7,
 		element: <Test7 />,
+	},
+	{
+		path: pathNames.useState.test8,
+		element: <Test8 />,
 	},
 ]);
 

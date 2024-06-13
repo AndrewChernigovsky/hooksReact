@@ -5,7 +5,7 @@ import { pathNames } from "../main";
 
 export const Test4 = () => {
 	const [languageInfo, setLanguageInfo] = useState({
-		languageName: "javaScript",
+		languageName: "JavaScript",
 		createdAt: "8 июля 1996",
 	});
 

@@ -22,7 +22,7 @@ export const Test7 = () => {
 				понимать как это будет работать
 			</p>
 
-			<Link to={pathNames.useState.test7}>Изменение массива объектов</Link>
+			<Link to={pathNames.useState.test8}>Изменение массива объектов</Link>
 		</div>
 	);
 };
