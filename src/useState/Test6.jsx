@@ -39,7 +39,7 @@ export const Test6 = () => {
 				);
 			})}
 
-			<Link to={pathNames.useState.test5}>Поговорим о массивах</Link>
+			<Link to={pathNames.useState.test7}>Слудеющий урок</Link>
 		</div>
 	);
 };
