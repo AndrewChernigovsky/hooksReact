@@ -12,9 +12,6 @@ export const Test4 = () => {
 	const changeValue = () => {
 		setLanguageInfo({ ...languageInfo, shorName: "JS" });
 	};
-	const codeString = `
-  setLanguageInfo({ ...languageInfo, shorName: "JS" });
-  `;
 
 	return (
 		<div>
@@ -23,7 +20,7 @@ export const Test4 = () => {
 				Правильным же решением будет использовать useState для обновления
 				состояния в React
 			</p>
-			<code>{codeString}</code>
+			<code>{`setLanguageInfo({ ...languageInfo, shorName: "JS" });`}</code>
 			<p>Рассмотри что здесь произошло:</p>
 			<p>
 				В функцию <code>setLanguageInfo</code> мы передаем новый объект, в

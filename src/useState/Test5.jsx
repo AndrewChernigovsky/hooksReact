@@ -1,51 +1,39 @@
-import { useState } from "react";
 import { Link } from "react-router-dom";
 import { Header } from "../Header";
 import { pathNames } from "../main";
 
 export const Test5 = () => {
-	const [languageInfo, setLanguageInfo] = useState({
-		languageName: "javaScript",
-		createdAt: "8 июля 1996",
-	});
+	const languages = ["HTML", "CSS"];
 
 	const changeValue = () => {
-		setLanguageInfo({ ...languageInfo, shorName: "JS" });
+		languages.push("JavaScript");
 	};
-	const codeString = `
-  setLanguageInfo({ ...languageInfo, shorName: "JS" });
-  `;
 
 	return (
 		<div>
-			<Header title="Базовая теория useState" src="src/useState/Test4.jsx" />
+			<Header title="Базовая теория useState" src="src/useState/Test5.jsx" />
 			<p>
-				Правильным же решением будет использовать useState для обновления
-				состояния в React
-			</p>
-			<code>{codeString}</code>
-			<p>Рассмотри что здесь произошло:</p>
-			<p>
-				В функцию <code>setLanguageInfo</code> мы передаем новый объект, в
-				который через spred (<code>...</code>) оператор копируем все содержимое
-				сторого состояния <code>languageInfo</code>, далее через запятую
-				добавляем в этот объект новое поле <code>shorName</code>
+				Как не трудно догадатся с массивами тоже не все так просто, просой push
+				не работает
 			</p>
 
-			<p>Нажми на кнопку "Change value" и убедись что это работает:</p>
+			<code className="code_block">{`const languages = ["HTML", "CSS"];`}</code>
+			<code className="code_block">{`languages.push('JavaScript');`}</code>
+
+			<p>Нажми на кнопку "Change value" и убедись что это не работает:</p>
 
 			<button onClick={changeValue}>Change value</button>
 
-			<p>Текущее значение переменной languageInfo:</p>
-			<code className="code_block">Имя языка: {languageInfo.languageName}</code>
-			<code className="code_block">
-				Сокращенное название: {languageInfo.shorName}
-			</code>
-			<code className="code_block">
-				Дата создания: {languageInfo.createdAt}
-			</code>
+			<p>Текущее значение переменной languages:</p>
+			{languages.map((language) => {
+				return (
+					<code className="code_block" key={language}>
+						{language}
+					</code>
+				);
+			})}
 
-			<Link to={pathNames.useState.test5}>Поговорим о массивах</Link>
+			<Link to={pathNames.useState.test6}>Узнать как правильно</Link>
 		</div>
 	);
 };
