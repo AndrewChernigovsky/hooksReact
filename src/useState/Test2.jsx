@@ -1,5 +1,7 @@
 import { useState } from "react";
 import { Header } from "../Header";
+import { Link } from "react-router-dom";
+import { pathNames } from "../main";
 
 export const Test2 = () => {
 	const [value, setValue] = useState("old value");
@@ -36,6 +38,8 @@ export const Test2 = () => {
 				Теперь мы все сделали по правильному и React видит изменения, посе чего
 				они отображаются на экране
 			</p>
+
+      <Link to={pathNames.useState.test3}>Следующее задание</Link>
 		</div>
 	);
 };
