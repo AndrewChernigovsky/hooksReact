@@ -1,9 +1,9 @@
 import { useState } from "react";
-import { Header } from "../Header";
 import { Link } from "react-router-dom";
-import { pathNames } from "../main";
+import { Header } from "../../Header.jsx";
+import { pathNames } from "../../assets/routes/useState.jsx";
 
-export const Test2 = () => {
+export const Example2 = () => {
 	const [value, setValue] = useState("old value");
 
 	const changeValue = () => {
@@ -12,7 +12,7 @@ export const Test2 = () => {
 
 	return (
 		<div>
-			<Header title="Базовая теория useState" src="src/useState/Test2.jsx" />
+			<Header title="Базовая теория useState" src="src/useState/Example2.jsx" />
 
 			<p>
 				Теперь давайте обновлять значение правильно, для этого на понадобится
@@ -39,7 +39,7 @@ export const Test2 = () => {
 				они отображаются на экране
 			</p>
 
-      <Link to={pathNames.useState.test3}>Следующее задание</Link>
+			<Link to={pathNames.useState.example3}>Следующее задание</Link>
 		</div>
 	);
 };

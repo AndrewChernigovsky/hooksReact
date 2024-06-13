@@ -1,8 +1,8 @@
 import { Link } from "react-router-dom";
-import { Header } from "../Header";
-import { pathNames } from "../main";
+import { Header } from "../../Header.jsx";
+import { pathNames } from "../../assets/routes/useState.jsx";
 
-export const Test3 = () => {
+export const Example3 = () => {
 	const languageInfo = { languageName: "javaScript", createdAt: "8 июля 1996" };
 
 	const changeValue = () => {
@@ -11,7 +11,7 @@ export const Test3 = () => {
 
 	return (
 		<div>
-			<Header title="Базовая теория useState" src="src/useState/Test24jsx" />
+			<Header title="Базовая теория useState" src="src/useState/Example3.jsx" />
 
 			<p>Работа с примитивами это - примитивно</p>
 			<p>
@@ -33,7 +33,7 @@ export const Test3 = () => {
 				Дата создания: {languageInfo.createdAt}
 			</code>
 
-			<Link to={pathNames.useState.test4}>
+			<Link to={pathNames.useState.example4}>
 				Посмотрим как можно сделать это правильно
 			</Link>
 		</div>

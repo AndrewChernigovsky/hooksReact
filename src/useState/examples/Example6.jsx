@@ -1,9 +1,9 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import { Header } from "../Header";
-import { pathNames } from "../main";
+import { Header } from "../../Header.jsx";
+import { pathNames } from "../../assets/routes/useState.jsx";
 
-export const Test6 = () => {
+export const Example6 = () => {
 	const [languages, setLanguages] = useState(["HTML", "CSS"]);
 
 	const changeValue = () => {
@@ -12,7 +12,7 @@ export const Test6 = () => {
 
 	return (
 		<div>
-			<Header title="Базовая теория useState" src="src/useState/Test6.jsx" />
+			<Header title="Базовая теория useState" src="src/useState/Example6.jsx" />
 			<p>
 				Правильным же решением будет использовать useState для обновления
 				состояния в React
@@ -39,7 +39,7 @@ export const Test6 = () => {
 				);
 			})}
 
-			<Link to={pathNames.useState.test7}>Слудеющий урок</Link>
+			<Link to={pathNames.useState.example7}>Слудеющий урок</Link>
 		</div>
 	);
 };

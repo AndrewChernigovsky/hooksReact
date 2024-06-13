@@ -1,8 +1,8 @@
 import { Link } from "react-router-dom";
-import { Header } from "../Header";
-import { pathNames } from "../main";
+import { Header } from "../../Header.jsx";
+import { pathNames } from "../../assets/routes/useState.jsx";
 
-export const Test5 = () => {
+export const Example5 = () => {
 	const languages = ["HTML", "CSS"];
 
 	const changeValue = () => {
@@ -11,7 +11,7 @@ export const Test5 = () => {
 
 	return (
 		<div>
-			<Header title="Базовая теория useState" src="src/useState/Test5.jsx" />
+			<Header title="Базовая теория useState" src="src/useState/Example5.jsx" />
 			<p>
 				Как не трудно догадатся с массивами тоже не все так просто, просой push
 				не работает
@@ -33,7 +33,7 @@ export const Test5 = () => {
 				);
 			})}
 
-			<Link to={pathNames.useState.test6}>Узнать как правильно</Link>
+			<Link to={pathNames.useState.example6}>Узнать как правильно</Link>
 		</div>
 	);
 };

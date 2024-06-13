@@ -1,9 +1,9 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import { Header } from "../Header";
-import { pathNames } from "../main";
+import { Header } from "../../Header.jsx";
+import { pathNames } from "../../assets/routes/useState.jsx";
 
-export const Test4 = () => {
+export const Example4 = () => {
 	const [languageInfo, setLanguageInfo] = useState({
 		languageName: "JavaScript",
 		createdAt: "8 июля 1996",
@@ -15,7 +15,7 @@ export const Test4 = () => {
 
 	return (
 		<div>
-			<Header title="Базовая теория useState" src="src/useState/Test4.jsx" />
+			<Header title="Базовая теория useState" src="src/useState/Example4.jsx" />
 			<p>
 				Правильным же решением будет использовать useState для обновления
 				состояния в React
@@ -42,7 +42,7 @@ export const Test4 = () => {
 				Дата создания: {languageInfo.createdAt}
 			</code>
 
-			<Link to={pathNames.useState.test5}>Поговорим о массивах</Link>
+			<Link to={pathNames.useState.example5}>Поговорим о массивах</Link>
 		</div>
 	);
 };

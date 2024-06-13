@@ -1,11 +1,11 @@
 import { Link } from "react-router-dom";
-import { Header } from "../Header";
-import { pathNames } from "../main";
+import { Header } from "../../Header.jsx";
+import { pathNames } from "../../assets/routes/useState.jsx";
 
-export const Test7 = () => {
+export const Example7 = () => {
 	return (
 		<div>
-			<Header title="Базовая теория useState" src="src/useState/Test7.jsx" />
+			<Header title="Базовая теория useState" src="src/useState/Example7.jsx" />
 			<p>
 				Основная идея состоит в том, что мы не можем менять / добавлять /
 				редактировать один элемент, нам ОБЯЗАТЕЛЬНО нужно сделать ПОЛНУЮ его
@@ -22,7 +22,7 @@ export const Test7 = () => {
 				понимать как это будет работать
 			</p>
 
-			<Link to={pathNames.useState.test8}>Изменение массива объектов</Link>
+			<Link to={pathNames.useState.example8}>Изменение массива объектов</Link>
 		</div>
 	);
 };

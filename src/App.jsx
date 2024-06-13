@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { pathNames } from "./main";
+import { pathNames } from "./assets/routes/useState";
 
 function App() {
 	return (
@@ -8,7 +8,7 @@ function App() {
 				В этом базовом гайде вы изучите основы работы с хуками, а так же
 				выполните несколько практических заданий
 			</p>
-			<Link to={pathNames.useState.test1}>Начать изучать</Link>
+			<Link to={pathNames.useState.example1}>Начать изучать</Link>
 		</>
 	);
 }

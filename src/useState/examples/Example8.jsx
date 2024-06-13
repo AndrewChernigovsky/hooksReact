@@ -1,9 +1,9 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import { Header } from "../Header";
-import { pathNames } from "../main";
+import { Header } from "../../Header.jsx";
+import { pathNames } from "../../assets/routes/useState.jsx";
 
-export const Test8 = () => {
+export const Example8 = () => {
 	const [languagesInfo, setLanguagesInfo] = useState([
 		{
 			name: "TypeScript",
@@ -28,7 +28,7 @@ export const Test8 = () => {
 
 	return (
 		<div>
-			<Header title="Базовая теория useState" src="src/useState/Test8.jsx" />
+			<Header title="Базовая теория useState" src="src/useState/Example8.jsx" />
 			<p>
 				У нас есть начальное состояние: это массив объектов с информацией о
 				языках программирования
@@ -37,7 +37,7 @@ export const Test8 = () => {
 				Но этот массив не совсем правильный, так как HTML не является языком
 				программирования
 			</p>
-			<p>По нажатию на кнопку мы хоти его удалить из списка языков</p>
+			<p>По нажатию на кнопку мы хотим его удалить из списка языков</p>
 
 			<button onClick={changeValue} style={{ marginBottom: "10px" }}>
 				Change value
@@ -58,7 +58,7 @@ export const Test8 = () => {
 				устанавливаем этот новый массив как новое значение состояния используя
 				функцию <code>{"setLanguagesInfo(onlyLanguages);"}</code>
 			</p>
-			<Link to={pathNames.useState.test8}>Изменение массива объектов</Link>
+			<Link to={pathNames.useState.example9}>Изменение массива объектов</Link>
 		</div>
 	);
 };
