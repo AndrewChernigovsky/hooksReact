@@ -12,11 +12,10 @@ export const Test1 = () => {
 		<div>
 			<Header title="Базовая теория useState" src="src/useState/Test1.jsx" />
 
-			<div className="code_wrapper">
-				<p>Вот так в ванильном JS мы изменяли значение переменной:</p>
-				<code>let value = "old value"; </code>
-				<code>value = "new value";</code>
-			</div>
+			<p>Вот так в ванильном JS мы изменяли значение переменной:</p>
+
+			<code className="code_block">let value = "old value"; </code>
+			<code className="code_block">value = "new value";</code>
 
 			<p>
 				Теперь попробуй нажать на кнопку "Change value", она должна изменить

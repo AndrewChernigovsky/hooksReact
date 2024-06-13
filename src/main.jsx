@@ -7,6 +7,7 @@ import { Test1 } from "./useState/Test1.jsx";
 import { Test2 } from "./useState/Test2.jsx";
 import { Test3 } from "./useState/Test3.jsx";
 import { Test4 } from "./useState/Test4.jsx";
+import { Test5 } from "./useState/Test5.jsx";
 
 export const pathNames = {
 	useState: {
@@ -14,6 +15,7 @@ export const pathNames = {
 		test2: "/useState-test-2",
 		test3: "/useState-test-3",
 		test4: "/useState-test-4",
+		test5: "/useState-test-5",
 	},
 };
 const router = createBrowserRouter([
@@ -34,8 +36,12 @@ const router = createBrowserRouter([
 		element: <Test3 />,
 	},
 	{
-		path: pathNames.useState.test3,
+		path: pathNames.useState.test4,
 		element: <Test4 />,
+	},
+	{
+		path: pathNames.useState.test5,
+		element: <Test5 />,
 	},
 ]);
 

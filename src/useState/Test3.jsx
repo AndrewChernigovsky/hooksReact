@@ -11,7 +11,7 @@ export const Test3 = () => {
 
 	return (
 		<div>
-			<Header title="Базовая теория useState" src="src/useState/Test2.jsx" />
+			<Header title="Базовая теория useState" src="src/useState/Test24jsx" />
 
 			<p>Работа с примитивами это - примитивно</p>
 			<p>
@@ -25,9 +25,13 @@ export const Test3 = () => {
 			<button onClick={changeValue}>Change value</button>
 
 			<p>Текущее значение переменной languageInfo:</p>
-			<code>Имя языка: {languageInfo.languageName}</code>
-			<code>Сокращенное название: {languageInfo.shorName}</code>
-			<code>Дата создания: {languageInfo.createdAt}</code>
+			<code className="code_block">Имя языка: {languageInfo.languageName}</code>
+			<code className="code_block">
+				Сокращенное название: {languageInfo.shorName}
+			</code>
+			<code className="code_block">
+				Дата создания: {languageInfo.createdAt}
+			</code>
 
 			<Link to={pathNames.useState.test4}>
 				Посмотрим как можно сделать это правильно

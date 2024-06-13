@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { Header } from "../Header";
 import { pathNames } from "../main";
 
-export const Test4 = () => {
+export const Test5 = () => {
 	const [languageInfo, setLanguageInfo] = useState({
 		languageName: "javaScript",
 		createdAt: "8 июля 1996",
