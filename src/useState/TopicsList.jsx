@@ -1,183 +1,140 @@
 import { Link } from "react-router-dom";
+import { Example1 } from "../useState/examples/Example1.jsx";
+import { Example2 } from "../useState/examples/Example2.jsx";
+import { Example3 } from "../useState/examples/Example3.jsx";
+import { Example4 } from "../useState/examples/Example4.jsx";
+import { Example5 } from "../useState/examples/Example5.jsx";
+import { Example6 } from "../useState/examples/Example6.jsx";
+import { Example7 } from "../useState/examples/Example7.jsx";
+import { Example8 } from "../useState/examples/Example8.jsx";
+import { Example9 } from "../useState/examples/Example9.jsx";
+import { Training1 } from "./training/Training1.jsx";
+import { Training2 } from "./training/Training2.jsx";
 
-export const useStateTopicsInfo = {
-	example1: {
+/**
+ * Что бы добавить новую страницу нужно добавить объект в существующий массив
+ * url строить на основании порядка элементов, ЭТО ВАЖНО
+ * все завязано на индексах и порядке элементов
+ *
+ * Что бы добавить новые страницы, создайте отдельный объект с информацией
+ * Что бы роутинг заработал вам так же нужно добавить эту информацию в router объект
+ */
+const examleUrl = "/useState-example-";
+export const useStateExamplesInfo = [
+	{
 		title: "Проблема обновления примитивов",
 		srcPath: "/src/useState/examples/Example1.jsx",
-		url: "/useState-example-1",
+		url: examleUrl,
+		component: Example1,
 	},
-	example2: {
+	{
 		title: "Правильное обновление примитивов",
 		srcPath: "/src/useState/examples/Example2.jsx",
-		url: "/useState-example-2",
+		url: examleUrl,
+		component: Example2,
 	},
-	example3: {
+	{
 		title: "Проблема обновления объектов",
 		srcPath: "/src/useState/examples/Example3.jsx",
-		url: "/useState-example-3",
+		url: examleUrl,
+		component: Example3,
 	},
-	example4: {
+	{
 		title: "Правильное обновление объектов",
 		srcPath: "/src/useState/examples/Example4.jsx",
-		url: "/useState-example-4",
+		url: examleUrl,
+		component: Example4,
 	},
-	example5: {
+	{
 		title: "Проблема обновления массивов",
 		srcPath: "/src/useState/examples/Example5.jsx",
-		url: "/useState-example-5",
+		url: examleUrl,
+		component: Example5,
 	},
-	example6: {
+	{
 		title: "Правильное обновление массивов",
 		srcPath: "/src/useState/examples/Example6.jsx",
-		url: "/useState-example-6",
+		url: examleUrl,
+		component: Example6,
 	},
-	example7: {
+	{
 		title: "Общие сведения о useState",
 		srcPath: "/src/useState/examples/Example7.jsx",
-		url: "/useState-example-7",
+		url: examleUrl,
+		component: Example7,
 	},
-	example8: {
+	{
 		title: "Удаление элемента из массива",
 		srcPath: "/src/useState/examples/Example8.jsx",
-		url: "/useState-example-8",
+		url: examleUrl,
+		component: Example8,
 	},
-	example9: {
+	{
 		title: "Изменение элемента в массиве объектов",
 		srcPath: "/src/useState/examples/Example9.jsx",
-		url: "/useState-example-9",
+		url: examleUrl,
+		nextPageUrl: "/useState-training-1",
+		component: Example9,
 	},
+];
 
-	training1: {
+const trainingUrl = "/useState-training-";
+export const useStateTrainingInfo = [
+	{
 		title: "Тренировочное задание 1",
 		srcPath: "/src/useState/training/Training1.jsx",
-		url: "/useState-training-1",
+		url: trainingUrl,
+		component: Training1,
 	},
-	training2: {
+	{
 		title: "Тренировочное задание 2",
 		srcPath: "/src/useState/training/Training2.jsx",
-		url: "/useState-training-2",
+		url: trainingUrl,
+		component: Training2,
 	},
-};
+];
 
 export const UseStateTopicsList = ({ currentPage }) => {
 	return (
 		<>
 			<h3>UseState Теория</h3>
 			<ul>
-				<li>
-					<Link
-						to={useStateTopicsInfo.example1.url}
-						style={{
-							color: currentPage === useStateTopicsInfo.example1.url && "#fff",
-						}}
-					>
-						{useStateTopicsInfo.example1.title}
-					</Link>
-				</li>
-				<li>
-					<Link
-						to={useStateTopicsInfo.example2.url}
-						style={{
-							color: currentPage === useStateTopicsInfo.example2.url && "#fff",
-						}}
-					>
-						{useStateTopicsInfo.example2.title}
-					</Link>
-				</li>
-				<li>
-					<Link
-						to={useStateTopicsInfo.example3.url}
-						style={{
-							color: currentPage === useStateTopicsInfo.example3.url && "#fff",
-						}}
-					>
-						{useStateTopicsInfo.example3.title}
-					</Link>
-				</li>
-				<li>
-					<Link
-						to={useStateTopicsInfo.example4.url}
-						style={{
-							color: currentPage === useStateTopicsInfo.example4.url && "#fff",
-						}}
-					>
-						{useStateTopicsInfo.example4.title}
-					</Link>
-				</li>
-				<li>
-					<Link
-						to={useStateTopicsInfo.example5.url}
-						style={{
-							color: currentPage === useStateTopicsInfo.example5.url && "#fff",
-						}}
-					>
-						{useStateTopicsInfo.example5.title}
-					</Link>
-				</li>
-				<li>
-					<Link
-						to={useStateTopicsInfo.example6.url}
-						style={{
-							color: currentPage === useStateTopicsInfo.example6.url && "#fff",
-						}}
-					>
-						{useStateTopicsInfo.example6.title}
-					</Link>
-				</li>
-				<li>
-					<Link
-						to={useStateTopicsInfo.example7.url}
-						style={{
-							color: currentPage === useStateTopicsInfo.example7.url && "#fff",
-						}}
-					>
-						{useStateTopicsInfo.example7.title}
-					</Link>
-				</li>
-				<li>
-					<Link
-						to={useStateTopicsInfo.example8.url}
-						style={{
-							color: currentPage === useStateTopicsInfo.example8.url && "#fff",
-						}}
-					>
-						{useStateTopicsInfo.example8.title}
-					</Link>
-				</li>
-				<li>
-					<Link
-						to={useStateTopicsInfo.example9.url}
-						style={{
-							color: currentPage === useStateTopicsInfo.example9.url && "#fff",
-						}}
-					>
-						{useStateTopicsInfo.example9.title}
-					</Link>
-				</li>
+				{useStateExamplesInfo.map((item, i) => {
+					const orderNumber = i + 1;
+
+					return (
+						<li key={item.title}>
+							<Link
+								to={item.url + orderNumber}
+								style={{
+									color: currentPage === item.url + orderNumber && "#fff",
+								}}
+							>
+								{item.title}
+							</Link>
+						</li>
+					);
+				})}
 			</ul>
 
 			<h3>UseState Практика</h3>
 			<ul>
-				<li>
-					<Link
-						to={useStateTopicsInfo.training1.url}
-						style={{
-							color: currentPage === useStateTopicsInfo.training1.url && "#fff",
-						}}
-					>
-						{useStateTopicsInfo.training1.title}
-					</Link>
-				</li>
-				<li>
-					<Link
-						to={useStateTopicsInfo.training2.url}
-						style={{
-							color: currentPage === useStateTopicsInfo.training2.url && "#fff",
-						}}
-					>
-						{useStateTopicsInfo.training2.title}
-					</Link>
-				</li>
+				{useStateTrainingInfo.map((item, i) => {
+					const orderNumber = i + 1;
+
+					return (
+						<li key={item.title}>
+							<Link
+								to={item.url + orderNumber}
+								style={{
+									color: currentPage === item.url + orderNumber && "#fff",
+								}}
+							>
+								{item.title}
+							</Link>
+						</li>
+					);
+				})}
 			</ul>
 		</>
 	);
