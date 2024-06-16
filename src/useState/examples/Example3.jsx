@@ -1,6 +1,5 @@
 import { Link } from "react-router-dom";
 import { Header } from "../../Header.jsx";
-import { pathNames } from "../../assets/routes/useState.jsx";
 import { useStateTopicsInfo } from "../TopicsList.jsx";
 
 export const Example3 = () => {
@@ -13,8 +12,8 @@ export const Example3 = () => {
 	return (
 		<div>
 			<Header
-				title={useStateTopicsInfo.example.example3.name}
-				src={useStateTopicsInfo.example.example3.src}
+				title={useStateTopicsInfo.example3.path.name}
+				src={useStateTopicsInfo.example3.path.src}
 			/>
 
 			<p>Работа с примитивами это - примитивно</p>
@@ -37,7 +36,7 @@ export const Example3 = () => {
 				Дата создания: {languageInfo.createdAt}
 			</code>
 
-			<Link to={pathNames.useState.example4}>
+			<Link to={useStateTopicsInfo.example4.path}>
 				Посмотрим как можно сделать это правильно
 			</Link>
 		</div>

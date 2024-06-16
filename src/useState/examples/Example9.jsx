@@ -1,7 +1,6 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import { Header } from "../../Header.jsx";
-import { pathNames } from "../../assets/routes/useState.jsx";
 import { useStateTopicsInfo } from "../TopicsList.jsx";
 
 export const Example9 = () => {
@@ -32,8 +31,8 @@ export const Example9 = () => {
 	return (
 		<div>
 			<Header
-				title={useStateTopicsInfo.example.example9.name}
-				src={useStateTopicsInfo.example.example9.src}
+				title={useStateTopicsInfo.example9.path.name}
+				src={useStateTopicsInfo.example9.path.src}
 			/>
 			<p>
 				Давай снова отредактируем наш немного не правильный массив объектов с
@@ -67,7 +66,7 @@ export const Example9 = () => {
 				Если же это не тот объект который нам нужен, мы его возвращаем в
 				исходном виде
 			</p>
-			<Link to={pathNames.useState.example8}>Изменение массива объектов</Link>
+			<Link to={useStateTopicsInfo.training1.path}>Начать практиковатся</Link>
 		</div>
 	);
 };

@@ -1,7 +1,6 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import { Header } from "../../Header.jsx";
-import { pathNames } from "../../assets/routes/useState.jsx";
 import { useStateTopicsInfo } from "../TopicsList.jsx";
 
 export const Example6 = () => {
@@ -14,8 +13,8 @@ export const Example6 = () => {
 	return (
 		<div>
 			<Header
-				title={useStateTopicsInfo.example.example6.name}
-				src={useStateTopicsInfo.example.example6.src}
+				title={useStateTopicsInfo.example6.path.name}
+				src={useStateTopicsInfo.example6.path.src}
 			/>
 			<p>
 				Правильным же решением будет использовать useState для обновления
@@ -43,7 +42,7 @@ export const Example6 = () => {
 				);
 			})}
 
-			<Link to={pathNames.useState.example7}>Следующий урок</Link>
+			<Link to={useStateTopicsInfo.example7.path}>Следующий урок</Link>
 		</div>
 	);
 };

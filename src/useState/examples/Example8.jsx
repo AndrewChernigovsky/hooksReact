@@ -1,7 +1,6 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import { Header } from "../../Header.jsx";
-import { pathNames } from "../../assets/routes/useState.jsx";
 import { useStateTopicsInfo } from "../TopicsList.jsx";
 
 export const Example8 = () => {
@@ -30,8 +29,8 @@ export const Example8 = () => {
 	return (
 		<div>
 			<Header
-				title={useStateTopicsInfo.example.example8.name}
-				src={useStateTopicsInfo.example.example8.src}
+				title={useStateTopicsInfo.example8.path.name}
+				src={useStateTopicsInfo.example8.path.src}
 			/>
 			<p>
 				У нас есть начальное состояние: это массив объектов с информацией о
@@ -62,7 +61,9 @@ export const Example8 = () => {
 				устанавливаем этот новый массив как новое значение состояния используя
 				функцию <code>{"setLanguagesInfo(onlyLanguages);"}</code>
 			</p>
-			<Link to={pathNames.useState.example9}>Изменение массива объектов</Link>
+			<Link to={useStateTopicsInfo.example9.path}>
+				Изменение массива объектов
+			</Link>
 		</div>
 	);
 };

@@ -1,7 +1,6 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import { Header } from "../../Header.jsx";
-import { pathNames } from "../../assets/routes/useState.jsx";
 import { useStateTopicsInfo } from "../TopicsList.jsx";
 
 export const Example2 = () => {
@@ -14,8 +13,8 @@ export const Example2 = () => {
 	return (
 		<div>
 			<Header
-				title={useStateTopicsInfo.example.example2.name}
-				src={useStateTopicsInfo.example.example2.src}
+				title={useStateTopicsInfo.example2.path.name}
+				src={useStateTopicsInfo.example2.path.src}
 			/>
 
 			<p>
@@ -43,7 +42,7 @@ export const Example2 = () => {
 				они отображаются на экране
 			</p>
 
-			<Link to={pathNames.useState.example3}>Следующее задание</Link>
+			<Link to={useStateTopicsInfo.example3.path}>Следующее задание</Link>
 		</div>
 	);
 };

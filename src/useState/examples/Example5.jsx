@@ -1,6 +1,5 @@
 import { Link } from "react-router-dom";
 import { Header } from "../../Header.jsx";
-import { pathNames } from "../../assets/routes/useState.jsx";
 import { useStateTopicsInfo } from "../TopicsList.jsx";
 
 export const Example5 = () => {
@@ -13,8 +12,8 @@ export const Example5 = () => {
 	return (
 		<div>
 			<Header
-				title={useStateTopicsInfo.example.example5.name}
-				src={useStateTopicsInfo.example.example5.src}
+				title={useStateTopicsInfo.example5.path.name}
+				src={useStateTopicsInfo.example5.path.src}
 			/>
 			<p>
 				Как не трудно догадатся с массивами тоже не все так просто, простой push
@@ -37,7 +36,7 @@ export const Example5 = () => {
 				);
 			})}
 
-			<Link to={pathNames.useState.example6}>Узнать как правильно</Link>
+			<Link to={useStateTopicsInfo.example6.path}>Узнать как правильно</Link>
 		</div>
 	);
 };

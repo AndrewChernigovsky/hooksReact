@@ -1,14 +1,13 @@
 import { Link } from "react-router-dom";
 import { Header } from "../../Header.jsx";
-import { pathNames } from "../../assets/routes/useState.jsx";
 import { useStateTopicsInfo } from "../TopicsList.jsx";
 
 export const Example7 = () => {
 	return (
 		<div>
 			<Header
-				title={useStateTopicsInfo.example.example7.name}
-				src={useStateTopicsInfo.example.example7.src}
+				title={useStateTopicsInfo.example7.path.name}
+				src={useStateTopicsInfo.example7.path.src}
 			/>
 			<p>
 				Основная идея состоит в том, что мы не можем менять / добавлять /
@@ -26,7 +25,9 @@ export const Example7 = () => {
 				понимать как это будет работать
 			</p>
 
-			<Link to={pathNames.useState.example8}>Изменение массива объектов</Link>
+			<Link to={useStateTopicsInfo.example8.path}>
+				Изменение массива объектов
+			</Link>
 		</div>
 	);
 };

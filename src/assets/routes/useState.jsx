@@ -2,6 +2,7 @@ import { createBrowserRouter } from "react-router-dom";
 import App from "../../App.jsx";
 
 import { Layout } from "../../components/Layout.jsx";
+import { useStateTopicsInfo } from "../../useState/TopicsList.jsx";
 import { Example1 } from "../../useState/examples/Example1.jsx";
 import { Example2 } from "../../useState/examples/Example2.jsx";
 import { Example3 } from "../../useState/examples/Example3.jsx";
@@ -11,20 +12,7 @@ import { Example6 } from "../../useState/examples/Example6.jsx";
 import { Example7 } from "../../useState/examples/Example7.jsx";
 import { Example8 } from "../../useState/examples/Example8.jsx";
 import { Example9 } from "../../useState/examples/Example9.jsx";
-
-export const pathNames = {
-	useState: {
-		example1: "/useState-example-1",
-		example2: "/useState-example-2",
-		example3: "/useState-example-3",
-		example4: "/useState-example-4",
-		example5: "/useState-example-5",
-		example6: "/useState-example-6",
-		example7: "/useState-example-7",
-		example8: "/useState-example-8",
-		example9: "/useState-example-9",
-	},
-};
+import { Training1 } from "../../useState/training/Training1.jsx";
 
 export const router = createBrowserRouter([
 	{
@@ -36,40 +24,44 @@ export const router = createBrowserRouter([
 				element: <App />,
 			},
 			{
-				path: pathNames.useState.example1,
+				path: useStateTopicsInfo.example1.path,
 				element: <Example1 />,
 			},
 			{
-				path: pathNames.useState.example2,
+				path: useStateTopicsInfo.example2.path,
 				element: <Example2 />,
 			},
 			{
-				path: pathNames.useState.example3,
+				path: useStateTopicsInfo.example3.path,
 				element: <Example3 />,
 			},
 			{
-				path: pathNames.useState.example4,
+				path: useStateTopicsInfo.example4.path,
 				element: <Example4 />,
 			},
 			{
-				path: pathNames.useState.example5,
+				path: useStateTopicsInfo.example5.path,
 				element: <Example5 />,
 			},
 			{
-				path: pathNames.useState.example6,
+				path: useStateTopicsInfo.example6.path,
 				element: <Example6 />,
 			},
 			{
-				path: pathNames.useState.example7,
+				path: useStateTopicsInfo.example7.path,
 				element: <Example7 />,
 			},
 			{
-				path: pathNames.useState.example8,
+				path: useStateTopicsInfo.example8.path,
 				element: <Example8 />,
 			},
 			{
-				path: pathNames.useState.example9,
+				path: useStateTopicsInfo.example9.path,
 				element: <Example9 />,
+			},
+			{
+				path: useStateTopicsInfo.training1.path,
+				element: <Training1 />,
 			},
 		],
 	},
