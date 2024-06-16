@@ -25,7 +25,7 @@ export const Example6 = () => {
 			<p>Рассмотри что здесь произошло:</p>
 			<p>
 				В функцию <code>setLanguages</code> мы передаем новый массив, в который
-				через spred (<code>...</code>) оператор копируем все содержимое сторого
+				через spred (<code>...</code>) оператор копируем все содержимое старого
 				состояния <code>setLanguages</code>, далее через запятую добавляем в
 				этот массив новое значение <code>"JS"</code>
 			</p>
@@ -43,7 +43,7 @@ export const Example6 = () => {
 				);
 			})}
 
-			<Link to={pathNames.useState.example7}>Слудеющий урок</Link>
+			<Link to={pathNames.useState.example7}>Следующий урок</Link>
 		</div>
 	);
 };

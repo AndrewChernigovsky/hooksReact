@@ -29,7 +29,7 @@ export const Example4 = () => {
 			<p>
 				В функцию <code>setLanguageInfo</code> мы передаем новый объект, в
 				который через spred (<code>...</code>) оператор копируем все содержимое
-				сторого состояния <code>languageInfo</code>, далее через запятую
+				старого состояния <code>languageInfo</code>, далее через запятую
 				добавляем в этот объект новое поле <code>shorName</code>
 			</p>
 

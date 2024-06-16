@@ -26,7 +26,6 @@ body {
   margin: 0;
   min-width: 320px;
   min-height: 100vh;
-  padding: 10px;
 }
 
 h1 {
@@ -45,9 +44,7 @@ code {
   background-color: #333333;
   padding: 5px;
 }
-.code_block {
-  display: block;
-}
+
 button {
   border-radius: 8px;
   border: 1px solid transparent;
@@ -66,7 +63,12 @@ button:focus,
 button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
-
+.code_block {
+  display: block;
+}
+.page_wrapper {
+  display: flex;
+}
 @media (prefers-color-scheme: light) {
   :root {
     color: #213547;

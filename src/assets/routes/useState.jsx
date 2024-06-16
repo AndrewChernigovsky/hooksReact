@@ -1,6 +1,7 @@
 import { createBrowserRouter } from "react-router-dom";
 import App from "../../App.jsx";
 
+import { Layout } from "../../components/Layout.jsx";
 import { Example1 } from "../../useState/examples/Example1.jsx";
 import { Example2 } from "../../useState/examples/Example2.jsx";
 import { Example3 } from "../../useState/examples/Example3.jsx";
@@ -24,45 +25,52 @@ export const pathNames = {
 		example9: "/useState-example-9",
 	},
 };
+
 export const router = createBrowserRouter([
 	{
 		path: "/",
-		element: <App />,
-	},
-	{
-		path: pathNames.useState.example1,
-		element: <Example1 />,
-	},
-	{
-		path: pathNames.useState.example2,
-		element: <Example2 />,
-	},
-	{
-		path: pathNames.useState.example3,
-		element: <Example3 />,
-	},
-	{
-		path: pathNames.useState.example4,
-		element: <Example4 />,
-	},
-	{
-		path: pathNames.useState.example5,
-		element: <Example5 />,
-	},
-	{
-		path: pathNames.useState.example6,
-		element: <Example6 />,
-	},
-	{
-		path: pathNames.useState.example7,
-		element: <Example7 />,
-	},
-	{
-		path: pathNames.useState.example8,
-		element: <Example8 />,
-	},
-	{
-		path: pathNames.useState.example9,
-		element: <Example9 />,
+		element: <Layout />,
+		children: [
+			{
+				path: "/",
+				element: <App />,
+			},
+			{
+				path: pathNames.useState.example1,
+				element: <Example1 />,
+			},
+			{
+				path: pathNames.useState.example2,
+				element: <Example2 />,
+			},
+			{
+				path: pathNames.useState.example3,
+				element: <Example3 />,
+			},
+			{
+				path: pathNames.useState.example4,
+				element: <Example4 />,
+			},
+			{
+				path: pathNames.useState.example5,
+				element: <Example5 />,
+			},
+			{
+				path: pathNames.useState.example6,
+				element: <Example6 />,
+			},
+			{
+				path: pathNames.useState.example7,
+				element: <Example7 />,
+			},
+			{
+				path: pathNames.useState.example8,
+				element: <Example8 />,
+			},
+			{
+				path: pathNames.useState.example9,
+				element: <Example9 />,
+			},
+		],
 	},
 ]);

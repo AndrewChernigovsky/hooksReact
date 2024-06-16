@@ -1,5 +1,5 @@
-import { Link } from "react-router-dom";
-import { pathNames } from "../assets/routes/useState";
+import { Link, useLocation } from "react-router-dom";
+import { pathNames, router } from "../assets/routes/useState";
 
 export const useStateTopicsInfo = {
 	example: {
@@ -42,53 +42,98 @@ export const useStateTopicsInfo = {
 	},
 };
 
-export const UseStateTopicsList = () => {
+export const UseStateTopicsList = ({ currentPage }) => {
 	return (
 		<>
-			<h3>Теория</h3>
+			<h3>UseState Теория</h3>
 			<ul>
 				<li>
-					<Link to={pathNames.useState.example1}>
+					<Link
+						to={pathNames.useState.example1}
+						style={{
+							color: currentPage === pathNames.useState.example1 && "#fff",
+						}}
+					>
 						{useStateTopicsInfo.example.example1.name}
 					</Link>
 				</li>
 				<li>
-					<Link to={pathNames.useState.example2}>
+					<Link
+						to={pathNames.useState.example2}
+						style={{
+							color: currentPage === pathNames.useState.example2 && "#fff",
+						}}
+					>
 						{useStateTopicsInfo.example.example2.name}
 					</Link>
 				</li>
 				<li>
-					<Link to={pathNames.useState.example3}>
+					<Link
+						to={pathNames.useState.example3}
+						style={{
+							color: currentPage === pathNames.useState.example3 && "#fff",
+						}}
+					>
 						{useStateTopicsInfo.example.example3.name}
 					</Link>
 				</li>
 				<li>
-					<Link to={pathNames.useState.example4}>
+					<Link
+						to={pathNames.useState.example4}
+						style={{
+							color: currentPage === pathNames.useState.example4 && "#fff",
+						}}
+					>
 						{useStateTopicsInfo.example.example4.name}
 					</Link>
 				</li>
 				<li>
-					<Link to={pathNames.useState.example5}>
+					<Link
+						to={pathNames.useState.example5}
+						style={{
+							color: currentPage === pathNames.useState.example5 && "#fff",
+						}}
+					>
 						{useStateTopicsInfo.example.example5.name}
 					</Link>
 				</li>
 				<li>
-					<Link to={pathNames.useState.example6}>
+					<Link
+						to={pathNames.useState.example6}
+						style={{
+							color: currentPage === pathNames.useState.example6 && "#fff",
+						}}
+					>
 						{useStateTopicsInfo.example.example6.name}
 					</Link>
 				</li>
 				<li>
-					<Link to={pathNames.useState.example7}>
+					<Link
+						to={pathNames.useState.example7}
+						style={{
+							color: currentPage === pathNames.useState.example7 && "#fff",
+						}}
+					>
 						{useStateTopicsInfo.example.example7.name}
 					</Link>
 				</li>
 				<li>
-					<Link to={pathNames.useState.example8}>
+					<Link
+						to={pathNames.useState.example8}
+						style={{
+							color: currentPage === pathNames.useState.example8 && "#fff",
+						}}
+					>
 						{useStateTopicsInfo.example.example8.name}
 					</Link>
 				</li>
 				<li>
-					<Link to={pathNames.useState.example9}>
+					<Link
+						to={pathNames.useState.example9}
+						style={{
+							color: currentPage === pathNames.useState.example9 && "#fff",
+						}}
+					>
 						{useStateTopicsInfo.example.example9.name}
 					</Link>
 				</li>
