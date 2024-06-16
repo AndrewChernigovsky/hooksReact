@@ -20,7 +20,7 @@ export const Example8 = ({ title, srcPath, nextPageUrl }) => {
 
 	const changeValue = () => {
 		const onlyLanguages = languagesInfo.filter(
-			(language) => language.title !== "HTML",
+			(language) => language.name !== "HTML",
 		);
 		setLanguagesInfo(onlyLanguages);
 	};
@@ -45,7 +45,7 @@ export const Example8 = ({ title, srcPath, nextPageUrl }) => {
 			{languagesInfo.map((language) => {
 				return (
 					<div key={language.name}>
-						<code>name: {language.title};</code>
+						<code>name: {language.name};</code>
 						<code>createdAt: {language.createdAt};</code>
 					</div>
 				);

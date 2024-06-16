@@ -18,7 +18,7 @@ export const Example9 = ({ title, srcPath, nextPageUrl }) => {
 
 	const changeValue = () => {
 		const correctArray = languagesInfo.map((language) => {
-			if (language.title === "JavaScript") {
+			if (language.name === "JavaScript") {
 				return { ...language, shortName: "JS" };
 			}
 			return language;
