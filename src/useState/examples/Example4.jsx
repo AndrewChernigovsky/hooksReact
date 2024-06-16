@@ -1,9 +1,8 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import { Header } from "../../Header.jsx";
-import { useStateTopicsInfo } from "../TopicsList.jsx";
 
-export const Example4 = () => {
+export const Example4 = ({ title, srcPath, nextPageUrl }) => {
 	const [languageInfo, setLanguageInfo] = useState({
 		languageName: "JavaScript",
 		createdAt: "8 июля 1996",
@@ -15,10 +14,7 @@ export const Example4 = () => {
 
 	return (
 		<div>
-			<Header
-				title={useStateTopicsInfo.example4.path.name}
-				src={useStateTopicsInfo.example4.path.src}
-			/>
+			<Header title={title} src={srcPath} />
 			<p>
 				Правильным же решением будет использовать useState для обновления
 				состояния в React
@@ -45,7 +41,7 @@ export const Example4 = () => {
 				Дата создания: {languageInfo.createdAt}
 			</code>
 
-			<Link to={useStateTopicsInfo.example5.path}>Поговорим о массивах</Link>
+			<Link to={nextPageUrl}>Поговорим о массивах</Link>
 		</div>
 	);
 };

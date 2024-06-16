@@ -12,7 +12,7 @@ export const Training1 = () => {
 	return (
 		<div>
 			<Header
-				title={useStateTopicsInfo.training1.name}
+				title={useStateTopicsInfo.training1.title}
 				src={useStateTopicsInfo.training1.src}
 			/>
 			<p>

@@ -1,9 +1,8 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import { Header } from "../../Header.jsx";
-import { useStateTopicsInfo } from "../TopicsList.jsx";
 
-export const Example6 = () => {
+export const Example6 = ({ title, srcPath, nextPageUrl }) => {
 	const [languages, setLanguages] = useState(["HTML", "CSS"]);
 
 	const changeValue = () => {
@@ -12,10 +11,7 @@ export const Example6 = () => {
 
 	return (
 		<div>
-			<Header
-				title={useStateTopicsInfo.example6.path.name}
-				src={useStateTopicsInfo.example6.path.src}
-			/>
+			<Header title={title} src={srcPath} />
 			<p>
 				Правильным же решением будет использовать useState для обновления
 				состояния в React
@@ -42,7 +38,7 @@ export const Example6 = () => {
 				);
 			})}
 
-			<Link to={useStateTopicsInfo.example7.path}>Следующий урок</Link>
+			<Link to={nextPageUrl}>Следующий урок</Link>
 		</div>
 	);
 };

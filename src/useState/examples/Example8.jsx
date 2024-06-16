@@ -1,9 +1,8 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import { Header } from "../../Header.jsx";
-import { useStateTopicsInfo } from "../TopicsList.jsx";
 
-export const Example8 = () => {
+export const Example8 = ({ title, srcPath, nextPageUrl }) => {
 	const [languagesInfo, setLanguagesInfo] = useState([
 		{
 			name: "TypeScript",
@@ -21,17 +20,14 @@ export const Example8 = () => {
 
 	const changeValue = () => {
 		const onlyLanguages = languagesInfo.filter(
-			(language) => language.name !== "HTML",
+			(language) => language.title !== "HTML",
 		);
 		setLanguagesInfo(onlyLanguages);
 	};
 
 	return (
 		<div>
-			<Header
-				title={useStateTopicsInfo.example8.path.name}
-				src={useStateTopicsInfo.example8.path.src}
-			/>
+			<Header title={title} src={srcPath} />
 			<p>
 				У нас есть начальное состояние: это массив объектов с информацией о
 				языках программирования
@@ -49,7 +45,7 @@ export const Example8 = () => {
 			{languagesInfo.map((language) => {
 				return (
 					<div key={language.name}>
-						<code>name: {language.name};</code>
+						<code>name: {language.title};</code>
 						<code>createdAt: {language.createdAt};</code>
 					</div>
 				);
@@ -61,9 +57,7 @@ export const Example8 = () => {
 				устанавливаем этот новый массив как новое значение состояния используя
 				функцию <code>{"setLanguagesInfo(onlyLanguages);"}</code>
 			</p>
-			<Link to={useStateTopicsInfo.example9.path}>
-				Изменение массива объектов
-			</Link>
+			<Link to={nextPageUrl}>Изменение массива объектов</Link>
 		</div>
 	);
 };

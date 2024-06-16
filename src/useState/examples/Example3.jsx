@@ -1,8 +1,7 @@
 import { Link } from "react-router-dom";
 import { Header } from "../../Header.jsx";
-import { useStateTopicsInfo } from "../TopicsList.jsx";
 
-export const Example3 = () => {
+export const Example3 = ({ title, srcPath, nextPageUrl }) => {
 	const languageInfo = { languageName: "javaScript", createdAt: "8 июля 1996" };
 
 	const changeValue = () => {
@@ -11,10 +10,7 @@ export const Example3 = () => {
 
 	return (
 		<div>
-			<Header
-				title={useStateTopicsInfo.example3.path.name}
-				src={useStateTopicsInfo.example3.path.src}
-			/>
+			<Header title={title} src={srcPath} />
 
 			<p>Работа с примитивами это - примитивно</p>
 			<p>
@@ -36,9 +32,7 @@ export const Example3 = () => {
 				Дата создания: {languageInfo.createdAt}
 			</code>
 
-			<Link to={useStateTopicsInfo.example4.path}>
-				Посмотрим как можно сделать это правильно
-			</Link>
+			<Link to={nextPageUrl}>Посмотрим как можно сделать это правильно</Link>
 		</div>
 	);
 };

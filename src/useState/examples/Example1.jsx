@@ -1,8 +1,7 @@
 import { Link } from "react-router-dom";
 import { Header } from "../../Header.jsx";
-import { useStateTopicsInfo } from "../TopicsList.jsx";
-useStateTopicsInfo;
-export const Example1 = () => {
+
+export const Example1 = ({ title, srcPath, nextPageUrl }) => {
 	let value = "old value";
 
 	const changeValue = () => {
@@ -10,10 +9,7 @@ export const Example1 = () => {
 	};
 	return (
 		<>
-			<Header
-				title={useStateTopicsInfo.example1.name}
-				src={useStateTopicsInfo.example1.src}
-			/>
+			<Header title={title} src={srcPath} />
 			<p>Вот так в ванильном JS мы изменяли значение переменной:</p>
 			<code className="code_block">let value = "old value"; </code>
 			<code className="code_block">value = "new value";</code>
@@ -31,7 +27,7 @@ export const Example1 = () => {
 				изменится и ререндер не происходит
 			</p>
 			<p>В следующих уроках вы узнаете как это исправить</p>
-			<Link to={useStateTopicsInfo.example2.path}>Следующее задание</Link>
+			<Link to={nextPageUrl}>Следующее задание</Link>
 		</>
 	);
 };

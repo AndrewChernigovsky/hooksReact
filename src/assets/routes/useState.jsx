@@ -24,44 +24,104 @@ export const router = createBrowserRouter([
 				element: <App />,
 			},
 			{
-				path: useStateTopicsInfo.example1.path,
-				element: <Example1 />,
+				path: useStateTopicsInfo.example1.url,
+				element: (
+					<Example1
+						title={useStateTopicsInfo.example1.title}
+						srcPath={useStateTopicsInfo.example1.srcPath}
+						nextPageUrl={useStateTopicsInfo.example2.url}
+					/>
+				),
 			},
 			{
-				path: useStateTopicsInfo.example2.path,
-				element: <Example2 />,
+				path: useStateTopicsInfo.example2.url,
+				element: (
+					<Example2
+						title={useStateTopicsInfo.example2.title}
+						srcPath={useStateTopicsInfo.example2.srcPath}
+						nextPageUrl={useStateTopicsInfo.example3.url}
+					/>
+				),
 			},
 			{
-				path: useStateTopicsInfo.example3.path,
-				element: <Example3 />,
+				path: useStateTopicsInfo.example3.url,
+				element: (
+					<Example3
+						title={useStateTopicsInfo.example3.title}
+						srcPath={useStateTopicsInfo.example3.srcPath}
+						nextPageUrl={useStateTopicsInfo.example4.url}
+					/>
+				),
 			},
 			{
-				path: useStateTopicsInfo.example4.path,
-				element: <Example4 />,
+				path: useStateTopicsInfo.example4.url,
+				element: (
+					<Example4
+						title={useStateTopicsInfo.example4.title}
+						srcPath={useStateTopicsInfo.example4.srcPath}
+						nextPageUrl={useStateTopicsInfo.example5.url}
+					/>
+				),
 			},
 			{
-				path: useStateTopicsInfo.example5.path,
-				element: <Example5 />,
+				path: useStateTopicsInfo.example5.url,
+				element: (
+					<Example5
+						title={useStateTopicsInfo.example5.title}
+						srcPath={useStateTopicsInfo.example5.srcPath}
+						nextPageUrl={useStateTopicsInfo.example6.url}
+					/>
+				),
 			},
 			{
-				path: useStateTopicsInfo.example6.path,
-				element: <Example6 />,
+				path: useStateTopicsInfo.example6.url,
+				element: (
+					<Example6
+						title={useStateTopicsInfo.example6.title}
+						srcPath={useStateTopicsInfo.example6.srcPath}
+						nextPageUrl={useStateTopicsInfo.example7.url}
+					/>
+				),
 			},
 			{
-				path: useStateTopicsInfo.example7.path,
-				element: <Example7 />,
+				path: useStateTopicsInfo.example7.url,
+				element: (
+					<Example7
+						title={useStateTopicsInfo.example7.title}
+						srcPath={useStateTopicsInfo.example7.srcPath}
+						nextPageUrl={useStateTopicsInfo.example8.url}
+					/>
+				),
 			},
 			{
-				path: useStateTopicsInfo.example8.path,
-				element: <Example8 />,
+				path: useStateTopicsInfo.example8.url,
+				element: (
+					<Example8
+						title={useStateTopicsInfo.example8.title}
+						srcPath={useStateTopicsInfo.example8.srcPath}
+						nextPageUrl={useStateTopicsInfo.example9.url}
+					/>
+				),
 			},
 			{
-				path: useStateTopicsInfo.example9.path,
-				element: <Example9 />,
+				path: useStateTopicsInfo.example9.url,
+				element: (
+					<Example9
+						title={useStateTopicsInfo.example9.title}
+						srcPath={useStateTopicsInfo.example9.srcPath}
+						nextPageUrl={useStateTopicsInfo.training1.url}
+					/>
+				),
 			},
 			{
-				path: useStateTopicsInfo.training1.path,
-				element: <Training1 />,
+				path: useStateTopicsInfo.training1.url,
+				element: (
+					<Training1
+						title={useStateTopicsInfo.example3.title}
+						srcPath={useStateTopicsInfo.example3.srcPath}
+						nextPageUrl="/"
+					/>
+				),
 			},
 		],
 	},

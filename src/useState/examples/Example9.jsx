@@ -1,9 +1,8 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import { Header } from "../../Header.jsx";
-import { useStateTopicsInfo } from "../TopicsList.jsx";
 
-export const Example9 = () => {
+export const Example9 = ({ title, srcPath, nextPageUrl }) => {
 	const [languagesInfo, setLanguagesInfo] = useState([
 		{
 			name: "TypeScript",
@@ -19,7 +18,7 @@ export const Example9 = () => {
 
 	const changeValue = () => {
 		const correctArray = languagesInfo.map((language) => {
-			if (language.name === "JavaScript") {
+			if (language.title === "JavaScript") {
 				return { ...language, shortName: "JS" };
 			}
 			return language;
@@ -30,10 +29,7 @@ export const Example9 = () => {
 
 	return (
 		<div>
-			<Header
-				title={useStateTopicsInfo.example9.path.name}
-				src={useStateTopicsInfo.example9.path.src}
-			/>
+			<Header title={title} src={srcPath} />
 			<p>
 				Давай снова отредактируем наш немного не правильный массив объектов с
 				языками
@@ -60,13 +56,13 @@ export const Example9 = () => {
 				используем его, для перебора элементов массива
 			</p>
 			<p>
-				Внутри мы проверяем, <code>if(language.name === "JavaScript")</code>{" "}
+				Внутри мы проверяем, <code>if(language.title === "JavaScript")</code>{" "}
 				если это так, то мы возвращаем новый объект с обновленным полем{" "}
 				<code>{'return { ...language, shortName: "JS" }'}</code>
 				Если же это не тот объект который нам нужен, мы его возвращаем в
 				исходном виде
 			</p>
-			<Link to={useStateTopicsInfo.training1.path}>Начать практиковатся</Link>
+			<Link to={nextPageUrl}>Начать практиковаться</Link>
 		</div>
 	);
 };

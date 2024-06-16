@@ -1,9 +1,8 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import { Header } from "../../Header.jsx";
-import { useStateTopicsInfo } from "../TopicsList.jsx";
 
-export const Example2 = () => {
+export const Example2 = ({ title, srcPath, nextPageUrl }) => {
 	const [value, setValue] = useState("old value");
 
 	const changeValue = () => {
@@ -12,10 +11,7 @@ export const Example2 = () => {
 
 	return (
 		<div>
-			<Header
-				title={useStateTopicsInfo.example2.path.name}
-				src={useStateTopicsInfo.example2.path.src}
-			/>
+			<Header title={title} src={srcPath} />
 
 			<p>
 				Теперь давайте обновлять значение правильно, для этого на понадобится
@@ -42,7 +38,7 @@ export const Example2 = () => {
 				они отображаются на экране
 			</p>
 
-			<Link to={useStateTopicsInfo.example3.path}>Следующее задание</Link>
+			<Link to={nextPageUrl}>Следующее задание</Link>
 		</div>
 	);
 };

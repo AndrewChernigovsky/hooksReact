@@ -1,14 +1,10 @@
 import { Link } from "react-router-dom";
 import { Header } from "../../Header.jsx";
-import { useStateTopicsInfo } from "../TopicsList.jsx";
 
-export const Example7 = () => {
+export const Example7 = ({ title, srcPath, nextPageUrl }) => {
 	return (
 		<div>
-			<Header
-				title={useStateTopicsInfo.example7.path.name}
-				src={useStateTopicsInfo.example7.path.src}
-			/>
+			<Header title={title} src={srcPath} />
 			<p>
 				Основная идея состоит в том, что мы не можем менять / добавлять /
 				редактировать один элемент, нам ОБЯЗАТЕЛЬНО нужно сделать ПОЛНУЮ его
@@ -25,9 +21,7 @@ export const Example7 = () => {
 				понимать как это будет работать
 			</p>
 
-			<Link to={useStateTopicsInfo.example8.path}>
-				Изменение массива объектов
-			</Link>
+			<Link to={nextPageUrl}>Изменение массива объектов</Link>
 		</div>
 	);
 };

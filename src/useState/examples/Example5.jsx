@@ -1,8 +1,7 @@
 import { Link } from "react-router-dom";
 import { Header } from "../../Header.jsx";
-import { useStateTopicsInfo } from "../TopicsList.jsx";
 
-export const Example5 = () => {
+export const Example5 = ({ title, srcPath, nextPageUrl }) => {
 	const languages = ["HTML", "CSS"];
 
 	const changeValue = () => {
@@ -11,10 +10,7 @@ export const Example5 = () => {
 
 	return (
 		<div>
-			<Header
-				title={useStateTopicsInfo.example5.path.name}
-				src={useStateTopicsInfo.example5.path.src}
-			/>
+			<Header title={title} src={srcPath} />
 			<p>
 				Как не трудно догадатся с массивами тоже не все так просто, простой push
 				не работает
@@ -36,7 +32,7 @@ export const Example5 = () => {
 				);
 			})}
 
-			<Link to={useStateTopicsInfo.example6.path}>Узнать как правильно</Link>
+			<Link to={nextPageUrl}>Узнать как правильно</Link>
 		</div>
 	);
 };
