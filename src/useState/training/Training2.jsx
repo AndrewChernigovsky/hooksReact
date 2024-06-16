@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import { Header } from "../../Header";
 
 export const Training2 = ({ title, srcPath, nextPageUrl }) => {
@@ -15,9 +16,11 @@ export const Training2 = ({ title, srcPath, nextPageUrl }) => {
 
 			<button onClick={changeValue}>Change value</button>
 			<p>Текущее значение состояния: </p>
-			{numbers.map((number) => {
-				return <code key={number}>{number}</code>;
-			})}
+			<div>
+				{numbers.map((number) => {
+					return <code key={number}>{number}</code>;
+				})}
+			</div>
 			<Link to={nextPageUrl}>Следующее задание</Link>
 		</div>
 	);
