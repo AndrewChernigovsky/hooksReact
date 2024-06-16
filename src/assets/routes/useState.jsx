@@ -13,6 +13,7 @@ import { Example7 } from "../../useState/examples/Example7.jsx";
 import { Example8 } from "../../useState/examples/Example8.jsx";
 import { Example9 } from "../../useState/examples/Example9.jsx";
 import { Training1 } from "../../useState/training/Training1.jsx";
+import { Training2 } from "../../useState/training/Training2.jsx";
 
 export const router = createBrowserRouter([
 	{
@@ -117,8 +118,18 @@ export const router = createBrowserRouter([
 				path: useStateTopicsInfo.training1.url,
 				element: (
 					<Training1
-						title={useStateTopicsInfo.example3.title}
-						srcPath={useStateTopicsInfo.example3.srcPath}
+						title={useStateTopicsInfo.training1.title}
+						srcPath={useStateTopicsInfo.training1.srcPath}
+						nextPageUrl={useStateTopicsInfo.training2.url}
+					/>
+				),
+			},
+			{
+				path: useStateTopicsInfo.training2.url,
+				element: (
+					<Training2
+						title={useStateTopicsInfo.training2.title}
+						srcPath={useStateTopicsInfo.training2.srcPath}
 						nextPageUrl="/"
 					/>
 				),

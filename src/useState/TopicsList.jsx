@@ -52,6 +52,11 @@ export const useStateTopicsInfo = {
 		srcPath: "/src/useState/training/Training1.jsx",
 		url: "/useState-training-1",
 	},
+	training2: {
+		title: "Тренировочное задание 2",
+		srcPath: "/src/useState/training/Training2.jsx",
+		url: "/useState-training-2",
+	},
 };
 
 export const UseStateTopicsList = ({ currentPage }) => {
@@ -161,6 +166,16 @@ export const UseStateTopicsList = ({ currentPage }) => {
 						}}
 					>
 						{useStateTopicsInfo.training1.title}
+					</Link>
+				</li>
+				<li>
+					<Link
+						to={useStateTopicsInfo.training2.url}
+						style={{
+							color: currentPage === useStateTopicsInfo.training2.url && "#fff",
+						}}
+					>
+						{useStateTopicsInfo.training2.title}
 					</Link>
 				</li>
 			</ul>
