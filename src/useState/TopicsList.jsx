@@ -10,6 +10,11 @@ import { Example8 } from "../useState/examples/Example8.jsx";
 import { Example9 } from "../useState/examples/Example9.jsx";
 import { Training1 } from "./training/Training1.jsx";
 import { Training2 } from "./training/Training2.jsx";
+import { Training3 } from "./training/Training3.jsx";
+import { Training4 } from "./training/Training4.jsx";
+import { Training5 } from "./training/Training5.jsx";
+import { Training6 } from "./training/Training6.jsx";
+import { Training7 } from "./training/Training7.jsx";
 
 /**
  * Что бы добавить новую страницу нужно добавить объект в существующий массив
@@ -95,6 +100,37 @@ export const useStateTrainingInfo = [
 		srcPath: "/src/useState/training/Training2.jsx",
 		url: trainingUrl,
 		component: Training2,
+	},
+	{
+		title: "Тренировочное задание 3",
+		srcPath: "/src/useState/training/Training3.jsx",
+		url: trainingUrl,
+		component: Training3,
+	},
+	{
+		title: "Тренировочное задание 4",
+		srcPath: "/src/useState/training/Training4.jsx",
+		url: trainingUrl,
+		component: Training4,
+	},
+	{
+		title: "Тренировочное задание 5",
+		srcPath: "/src/useState/training/Training5.jsx",
+		url: trainingUrl,
+		component: Training5,
+	},
+	{
+		title: "Тренировочное задание 6",
+		srcPath: "/src/useState/training/Training6.jsx",
+		url: trainingUrl,
+		component: Training6,
+	},
+	{
+		title: "Тренировочное задание 7",
+		srcPath: "/src/useState/training/Training7.jsx",
+		url: trainingUrl,
+		component: Training7,
+		nextPageUrl: "/",
 	},
 ];
 

@@ -31,7 +31,7 @@ const useStateTrainingRoutes = useStateTrainingInfo.map((item, i) => {
 	const orderNumber = i + 1;
 	const nextPageUrl =
 		item.nextPageUrl ||
-		`${useStateExamplesInfo[i]?.url}${orderNumber + 1}` ||
+		`${useStateTrainingInfo[i]?.url}${orderNumber + 1}` ||
 		"/";
 	return {
 		path: item.url + orderNumber,
