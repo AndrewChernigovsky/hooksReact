@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import { UseEffectExample1 } from "./examples/UseEffectExample1.jsx";
 import { UseEffectExample2 } from "./examples/UseEffectExample2.jsx";
 import { UseEffectExample3 } from "./examples/UseEffectExample3.jsx";
+import { UseEffectExample4 } from "./examples/UseEffectExample4.jsx";
 
 /**
  * Что бы добавить новую страницу нужно добавить объект в существующий массив
@@ -34,6 +35,12 @@ export const useEffectExamplesInfo = [
 		srcPath: "/src/useEffect/examples/UseEffectExample3.jsx",
 		url: examleUrl,
 		component: UseEffectExample3,
+	},
+	{
+		title: "useEffect слежка за переменными",
+		srcPath: "/src/useEffect/examples/UseEffectExample4.jsx",
+		url: examleUrl,
+		component: UseEffectExample4,
 	},
 ];
 
