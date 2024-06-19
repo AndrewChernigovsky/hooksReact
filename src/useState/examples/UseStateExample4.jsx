@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import { Header } from "../../Header.jsx";
 
-export const Example4 = ({ title, srcPath, nextPageUrl }) => {
+export const UseStateExample4 = ({ title, srcPath, nextPageUrl }) => {
 	const [languageInfo, setLanguageInfo] = useState({
 		languageName: "JavaScript",
 		createdAt: "8 июля 1996",

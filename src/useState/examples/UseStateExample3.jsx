@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { Header } from "../../Header.jsx";
 
-export const Example3 = ({ title, srcPath, nextPageUrl }) => {
+export const UseStateExample3 = ({ title, srcPath, nextPageUrl }) => {
 	const languageInfo = { languageName: "javaScript", createdAt: "8 июля 1996" };
 
 	const changeValue = () => {

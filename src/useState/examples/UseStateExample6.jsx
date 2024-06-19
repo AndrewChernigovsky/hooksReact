@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import { Header } from "../../Header.jsx";
 
-export const Example6 = ({ title, srcPath, nextPageUrl }) => {
+export const UseStateExample6 = ({ title, srcPath, nextPageUrl }) => {
 	const [languages, setLanguages] = useState(["HTML", "CSS"]);
 
 	const changeValue = () => {

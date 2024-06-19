@@ -2,25 +2,13 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import { Header } from "../../Header";
 
-export const Training7 = ({ title, srcPath, nextPageUrl }) => {
+export const UseStateTraining5 = ({ title, srcPath, nextPageUrl }) => {
 	const [technologiesInfo, setTechnologiesInfo] = useState([
 		{
 			basedOn: "JavaScript",
-			technologies: [
-				{ name: "JavaScrpt", isKnowIt: true },
-				{ name: "TypeScript", isKnowIt: false },
-				{ name: "NodeJS", isKnowIt: false },
-				{ name: "React", isKnowIt: false },
-			],
+			technologies: ["JavaScrpt", "TypeScript", "NodeJS"],
 		},
-		{
-			basedOn: "CSS",
-			technologies: [
-				{ name: "CSS", isKnowIt: true },
-				{ name: "SCSS", isKnowIt: true },
-				{ name: "SASS", isKnowIt: true },
-			],
-		},
+		{ basedOn: "CSS", technologies: ["CSS", "SCSS", "SASS"] },
 	]);
 
 	const changeValue = () => {
@@ -31,7 +19,8 @@ export const Training7 = ({ title, srcPath, nextPageUrl }) => {
 		<div>
 			<Header title={title} src={srcPath} />
 			<p>
-				Вам необходимо поменять значение <code>isKnowIt</code> на true
+				Вам необходимо добавить <code>React</code> в массив технологий
+				основанных на JavaScript
 			</p>
 
 			<button onClick={changeValue}>Change value</button>
@@ -45,14 +34,7 @@ export const Training7 = ({ title, srcPath, nextPageUrl }) => {
 							</p>
 							<div>
 								{technologieInfo.technologies.map((technologie) => {
-									return (
-										<code
-											key={technologie.name}
-											style={{ color: technologie.isKnowIt ? "green" : "red" }}
-										>
-											{technologie.name}
-										</code>
-									);
+									return <code key={technologie}>{technologie}</code>;
 								})}
 							</div>
 						</div>

@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
-import { UseStateTopicsList } from "./useState/TopicsList";
+import { UseEffectTopicsList } from "./useEffect/UseEffectTopicsList";
+import { UseStateTopicsList } from "./useState/UseStateTopicsList";
 
 export const Sidebar = () => {
 	const { pathname } = useLocation();
@@ -30,6 +31,7 @@ export const Sidebar = () => {
 				Главная
 			</Link>
 			<UseStateTopicsList currentPage={currentPage} />
+			<UseEffectTopicsList currentPage={currentPage} />
 		</div>
 	);
 };

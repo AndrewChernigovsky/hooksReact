@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { Header } from "../../Header.jsx";
 
-export const Example7 = ({ title, srcPath, nextPageUrl }) => {
+export const UseStateExample7 = ({ title, srcPath, nextPageUrl }) => {
 	return (
 		<div>
 			<Header title={title} src={srcPath} />

@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import { Header } from "../../Header";
 
-export const Training4 = ({ title, srcPath, nextPageUrl }) => {
+export const UseStateTraining4 = ({ title, srcPath, nextPageUrl }) => {
 	const [languagesInfo, setLanguagesInfo] = useState([
 		{
 			name: "JavaScript",

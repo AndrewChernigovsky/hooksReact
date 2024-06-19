@@ -2,13 +2,13 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import { Header } from "../../Header";
 
-export const Training5 = ({ title, srcPath, nextPageUrl }) => {
+export const UseStateTraining6 = ({ title, srcPath, nextPageUrl }) => {
 	const [technologiesInfo, setTechnologiesInfo] = useState([
 		{
 			basedOn: "JavaScript",
 			technologies: ["JavaScrpt", "TypeScript", "NodeJS"],
 		},
-		{ basedOn: "CSS", technologies: ["CSS", "SCSS", "SASS"] },
+		{ basedOn: "CSS", technologies: ["CSS", "SCSS", "React", "SASS"] },
 	]);
 
 	const changeValue = () => {
@@ -19,8 +19,8 @@ export const Training5 = ({ title, srcPath, nextPageUrl }) => {
 		<div>
 			<Header title={title} src={srcPath} />
 			<p>
-				Вам необходимо добавить <code>React</code> в массив технологий
-				основанных на JavaScript
+				Вам необходимо удалить <code>React</code> в массив технологий основанных
+				на CSS
 			</p>
 
 			<button onClick={changeValue}>Change value</button>

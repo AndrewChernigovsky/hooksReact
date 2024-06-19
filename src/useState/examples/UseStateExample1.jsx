@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { Header } from "../../Header.jsx";
 
-export const Example1 = ({ title, srcPath, nextPageUrl }) => {
+export const UseStateExample1 = ({ title, srcPath, nextPageUrl }) => {
 	let value = "old value";
 
 	const changeValue = () => {
