@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { UseEffectExample1 } from "./examples/UseEffectExample1.jsx";
 import { UseEffectExample2 } from "./examples/UseEffectExample2.jsx";
+import { UseEffectExample3 } from "./examples/UseEffectExample3.jsx";
 
 /**
  * Что бы добавить новую страницу нужно добавить объект в существующий массив
@@ -27,6 +28,12 @@ export const useEffectExamplesInfo = [
 		srcPath: "/src/useEffect/examples/UseEffectExample2.jsx",
 		url: examleUrl,
 		component: UseEffectExample2,
+	},
+	{
+		title: "useEffect практический пример",
+		srcPath: "/src/useEffect/examples/UseEffectExample3.jsx",
+		url: examleUrl,
+		component: UseEffectExample3,
 	},
 ];
 
