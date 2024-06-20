@@ -55,7 +55,7 @@ export const UseEffectExample3 = ({ title, srcPath, nextPageUrl }) => {
 			</p>
 
 			<div style={{ width: 150, height: 150 }}>
-				<img src={photo.thumbnailUrl} alt={photo.title} key={photo.id} />
+				<img src={photo.thumbnailUrl} alt={photo.title} />
 			</div>
 
 			<Link to={nextPageUrl}>Рассмотрим переменные для useEffect</Link>

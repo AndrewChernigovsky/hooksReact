@@ -19,7 +19,7 @@ export const UseEffectExample4 = ({ title, srcPath, nextPageUrl }) => {
 		return Math.floor(Math.random() * (max - min) + min);
 	}
 
-	const changephotoId = () => {
+	const changePhotoId = () => {
 		const randomId = getRandomNumber(1, 100);
 		setPhotoId(randomId);
 	};
@@ -62,7 +62,7 @@ export const UseEffectExample4 = ({ title, srcPath, nextPageUrl }) => {
 				Значение другого состояния:
 				<code>{otherState}</code>
 			</p>
-			<button onClick={changephotoId}>Изменить photoId</button>
+			<button onClick={changePhotoId}>Изменить photoId</button>
 			<p>
 				Текущий photoId:
 				<code>{photoId}</code>
@@ -75,7 +75,7 @@ export const UseEffectExample4 = ({ title, srcPath, nextPageUrl }) => {
 			</p>
 
 			<div style={{ width: 150, height: 150 }}>
-				<img src={photo.thumbnailUrl} alt={photo.title} key={photo.id} />
+				<img src={photo.thumbnailUrl} alt={photo.title} />
 			</div>
 
 			<Link to={nextPageUrl}>Рассмотрим переменные для useEffect</Link>
