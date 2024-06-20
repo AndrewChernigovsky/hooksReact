@@ -3,6 +3,7 @@ import { UseEffectExample1 } from "./examples/UseEffectExample1.jsx";
 import { UseEffectExample2 } from "./examples/UseEffectExample2.jsx";
 import { UseEffectExample3 } from "./examples/UseEffectExample3.jsx";
 import { UseEffectExample4 } from "./examples/UseEffectExample4.jsx";
+import { UseEffectTraining1 } from "./training/UseEffectTraining1.jsx";
 
 /**
  * Что бы добавить новую страницу нужно добавить объект в существующий массив
@@ -41,11 +42,19 @@ export const useEffectExamplesInfo = [
 		srcPath: "/src/useEffect/examples/UseEffectExample4.jsx",
 		url: examleUrl,
 		component: UseEffectExample4,
+		nextPageUrl: "/useEffect-training-1",
 	},
 ];
 
 const trainingUrl = "/useEffect-training-";
-export const useEffectTrainingInfo = [];
+export const useEffectTrainingInfo = [
+	{
+		title: "Тренировочное задание 1",
+		srcPath: "/src/useEffect/examples/UseEffectTraining1.jsx",
+		url: trainingUrl,
+		component: UseEffectTraining1,
+	},
+];
 
 export const UseEffectTopicsList = ({ currentPage }) => {
 	return (

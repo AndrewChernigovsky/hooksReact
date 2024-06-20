@@ -78,7 +78,7 @@ export const UseEffectExample4 = ({ title, srcPath, nextPageUrl }) => {
 				<img src={photo.thumbnailUrl} alt={photo.title} />
 			</div>
 
-			<Link to={nextPageUrl}>Рассмотрим переменные для useEffect</Link>
+			<Link to={nextPageUrl}>Начать практику</Link>
 		</div>
 	);
 };
