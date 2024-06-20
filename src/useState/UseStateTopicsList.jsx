@@ -8,6 +8,8 @@ import { UseStateExample6 } from "./examples/UseStateExample6.jsx";
 import { UseStateExample7 } from "./examples/UseStateExample7.jsx";
 import { UseStateExample8 } from "./examples/UseStateExample8.jsx";
 import { UseStateExample9 } from "./examples/UseStateExample9.jsx";
+import { UseStateExample10 } from "./examples/UseStateExample10.jsx";
+import { UseStateExample11 } from "./examples/UseStateExample11.jsx";
 import { UseStateTraining1 } from "./training/UseStateTraining1.jsx";
 import { UseStateTraining2 } from "./training/UseStateTraining2.jsx";
 import { UseStateTraining3 } from "./training/UseStateTraining3.jsx";
@@ -28,62 +30,74 @@ import { UseStateTraining7 } from "./training/UseStateTraining7.jsx";
  * вы можете указать это как отдельный роут, система роутингов поймет что адрес уже не порядковый
  * например: nextPageUrl: "/useState-training-1",
  */
-const examleUrl = "/useState-example-";
+const exampleUrl = "/useState-example-";
 export const useStateExamplesInfo = [
 	{
 		title: "Проблема обновления примитивов",
 		srcPath: "/src/useState/examples/UseStateExample1.jsx",
-		url: examleUrl,
+		url: exampleUrl,
 		component: UseStateExample1,
 	},
 	{
 		title: "Правильное обновление примитивов",
 		srcPath: "/src/useState/examples/UseStateExample2.jsx",
-		url: examleUrl,
+		url: exampleUrl,
 		component: UseStateExample2,
 	},
 	{
 		title: "Проблема обновления объектов",
 		srcPath: "/src/useState/examples/UseStateExample3.jsx",
-		url: examleUrl,
+		url: exampleUrl,
 		component: UseStateExample3,
 	},
 	{
 		title: "Правильное обновление объектов",
 		srcPath: "/src/useState/examples/UseStateExample4.jsx",
-		url: examleUrl,
+		url: exampleUrl,
 		component: UseStateExample4,
 	},
 	{
 		title: "Проблема обновления массивов",
 		srcPath: "/src/useState/examples/UseStateExample5.jsx",
-		url: examleUrl,
+		url: exampleUrl,
 		component: UseStateExample5,
 	},
 	{
 		title: "Правильное обновление массивов",
 		srcPath: "/src/useState/examples/UseStateExample6.jsx",
-		url: examleUrl,
+		url: exampleUrl,
 		component: UseStateExample6,
 	},
 	{
 		title: "Общие сведения о useState",
 		srcPath: "/src/useState/examples/UseStateExample7.jsx",
-		url: examleUrl,
+		url: exampleUrl,
 		component: UseStateExample7,
 	},
 	{
 		title: "Удаление элемента из массива",
 		srcPath: "/src/useState/examples/UseStateExample8.jsx",
-		url: examleUrl,
+		url: exampleUrl,
 		component: UseStateExample8,
 	},
 	{
 		title: "Изменение элемента в массиве объектов",
 		srcPath: "/src/useState/examples/UseStateExample9.jsx",
-		url: examleUrl,
-		nextPageUrl: "/useState-training-1",
+		url: exampleUrl,
 		component: UseStateExample9,
+	},
+	{
+		title: "Работа с булевыми значениями",
+		srcPath: "/src/useState/examples/UseStateExample10.jsx",
+		url: exampleUrl,
+		component: UseStateExample10,
+	},
+	{
+		title: "Еще один нюанс при работе с useState",
+		srcPath: "/src/useState/examples/UseStateExample11.jsx",
+		url: exampleUrl,
+		nextPageUrl: "/useState-training-1",
+		component: UseStateExample11,
 	},
 ];
 
