@@ -4,7 +4,7 @@ import { Header } from "../../Header";
 
 export const UseEffectExample3 = ({ title, srcPath, nextPageUrl }) => {
 	const [otherState, setOtherState] = useState(0);
-	const savedPhoto = JSON.parse(localStorage.getItem("photosInfo"));
+	const savedPhoto = JSON.parse(localStorage.getItem("photosInfo") || "{}");
 	const [photo, setPhoto] = useState(savedPhoto);
 
 	const changeValue = () => {
